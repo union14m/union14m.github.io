@@ -9,6 +9,7 @@
   <title>Rethinking Scene Text Recognition: A Data Perspective</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -29,7 +30,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/title.svg">
+  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -48,38 +49,30 @@
             <h1 class="title is-1 publication-title">Rethink Scene Text Recognition: A Data Perspective</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://github.com/Mountchicken">Qing Jiang</a><sup>1</sup>,</span>
+                <a href="https://mountchicken.github.io/">Qing Jiang</a> ,</span>
               <span class="author-block">
-                <a href="https://github.com/jpWang">Jiapeng Wang</a><sup>1</sup>,</span>
+                <a href="https://github.com/jpWang">Jiapeng Wang</a> ,</span>
               <span class="author-block">
-                <a href="https://github.com/shannanyinxiang">Dezhi Peng</a><sup>1</sup>,
+                <a href="https://github.com/shannanyinxiang">Dezhi Peng</a> ,
               </span>
               <span class="author-block">
-                <a href="https://github.com/lcy0604">Chongyu Liu</a><sup>1</sup>,
+                <a href="https://github.com/lcy0604">Chongyu Liu</a> ,
               </span>
               <span class="author-block">
-                <a href="http://www.dlvc-lab.net/lianwen/">Lianwen Jin</a><sup>1</sup>,
+                <a href="http://www.dlvc-lab.net/lianwen/">Lianwen Jin</a><sup>*</sup>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>South China University of Technology</span>
+              <span class="author-block">South China University of Technology</span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. -->
-                <span class="link-block">
-                  <a href="material/Revisiting_Scene_Text_Recognition__A_Data_Perspective__arXiv_.pdf" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
                 <!-- arxiv Link. -->
                 <span class="link-block">
-                  <a href="material/Revisiting_Scene_Text_Recognition__A_Data_Perspective__arXiv_.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2307.08723"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -124,18 +117,6 @@
     </div>
   </section>
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="static/images/union14ml.png" style="width: 100%" alt>
-        <img src="static/images/union14mu.png" style="width: 100%" alt>
-        <h2 class="subtitle has-text-centered">
-          <a href="https://github.com/Mountchicken/Union14M" target="_blank" title="tag_list"><span
-              style="color: pink; font-weight:bold">Union14M contains 4M labeled data and 10M Unlabeled data.</span></a>
-        </h2>
-      </div>
-    </div>
-  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -145,24 +126,30 @@
           <h2 class="title is-3">Two Questions for Scene Text Recognition</h2>
           <div class="content has-text-justified">
             <p>
-              Scene Text Recognition (STR) is a fundamental task in computer vision, which aims to recognize the text in
-              natural
-              images. STR has been developed rapidly, and recent state-of-the-arts have shown a trend of
-              accuracy
-              saturation on six commonly used benchmarks (IC13, IC15, SVT, IIIT5K, SVTP, CUTE80).
+              Since the introduction of the end-to-end network CRNN, Scene Text Recognition (STR) has
+              embarked on a fast-paced journey driven by deep learning. With the continuous emergence of new methods,
+              the accuracy of
+              the six commonly used benchmarks in the STR field has been steadily improving. As shown below, the latest
+              advancements in the STR field are exhibiting a saturation trend in accuracy. The challenges posed by the
+              commonly used
+              benchmarks appear to have been "solved," evident in the narrow room for improvement in accuracy and the
+              recent
+              deceleration in performance gains by SOTA models.
             </p>
+           
             <p>
             <div align=center>
               <img src="static/images/benchmark_acc.png" style="width: 60%" alt>
             </div>
             </p>
             <p>
-              The challenges in the common benchmarks seem “solved”,
-              suggested by the narrow scope for improvement, and the slowdown step of performance
-              gain in recent SOTAs. This phenomenon inspires us to raise questions
-              of <b>1) whether the common benchmarks remain sufficient to promote future progress</b>
-              and <b>2) whether this accuracy saturation implies that STR is solved.</b>
+              This phenomenon has prompted us to raise the following two questions: 1) Are the commonly used benchmark
+              still
+              sufficient to drive future progress in the field of STR? 2) Does the saturation of accuracy in these
+              benchmark
+              imply that the problem of STR has been solved?
             </p>
+
           </div>
         </div>
       </div>
@@ -170,15 +157,13 @@
 
   <section class="section">
     <div class="container is-max-desktop">
-
-      <div class="columns is-centered">
-
-        <!-- Visual Effects. -->
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3">Q1: Are common benchmarks remain challenging?</h2>
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Q1: Are common benchmarks remain challenging?</h2>
+          <div class="content has-text-justified">
             <p>
-              we start by selecting 13 representative models, including CTC-based
+              we start by selecting 13 representative models, including CTC-based,
               attention-based and language model-based models.
               We evaluate their performance on the six STR benchmarks to find their joint errors. As
               depicted below, only 3.9% (298 images) of the
@@ -188,36 +173,18 @@
             </p>
             <p>
             <div align=center>
-              <img src="static/images/error.png" style="width: 100%" alt>
+              <img src="static/images/error.png" style="width: 60%" alt>
             </div>
             </p>
-          </div>
-        </div>
-        <!--/ Visual Effects. -->
-
-        <!-- Matting. -->
-        <div class="column">
-          <h2 class="title is-3">Q2: Is STR solved or challenges are obscured?</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <p>
-                The accuracy saturation in common benchmarks can obscure challenges that STR models
-                still face. Therefore, we build Union14M to bring more profound insights beyond these benchmarks.
-                We discover that STR models perform poorly on Union14M-L, with an average accuracy of only 66.53%,
-                despite achieving an average accuracy of 87.03% on commonly used benchmarks. This suggest that
-                STR is far from being solved.
-              </p>
-              <p>
-              <div align=center>
-                <img src="static/images/performance.png" style="width: 100%" alt>
-              </div>
-              </p>
+            <p>
+            <div align=center>
+              <img src="static/images/benchmark_error.png" style="width: 100%" alt>
             </div>
+            </p>
 
           </div>
         </div>
       </div>
-    </div>
   </section>
 
   <section class="section">
@@ -225,86 +192,118 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Union14M: A Large-Scale STR Dataset</h2>
-          <p>
-            Union14M consists of 4
-            million <b>L</b>abeled images (Union14M-L) and 10 million <b>U</b>nlabeled
-            images (Union14M-U), obtained from 17 publicly available datasets. It can
-            be considered as a comprehensive representation of text images in the real world.
-          </p>
+          <h2 class="title is-3">Q2: Is STR solved or challenges are obscured?</h2>
+          <div class="content has-text-justified">
+            <p>
+              While the benchmarks for STR have somehow reached their upper limits, it does not necessarily imply that the
+              problem of STR
+              has been completely solved. To address this question, we constructed a large-scale, real-world scene text
+              recognition dataset called Union14M. Union14M is composed of 17 publicly available datasets, including 4
+              million labeled
+              data samples (Union14M-L) and 10 million high-quality unlabeled data samples (Union14M-U). As shown below
+              Union14M encompasses diverse real-world scenes, such as curved text, multi-oriented text, artistic fonts,
+              text on
+              complex backgrounds, and blurred/occluded text. It can be viewed as a comprehensive mapping of text
+              distributions in
+              real-world scenarios, enabling us to evaluate the performance of STR models in more complex and diverse
+              real-world
+              scenes.
+            </p>
+            <p>
+            <div align=center>
+              <img src="static/images/union14m.png" style="width: 60%" alt>
+            </div>
+            </p>
+            <p>
+              We conducted experiments using Union14M-L on 13 STR algorithms, comparing
+              their accuracy
+              on both the commonly used benchmarks and Union14M-L. As shown in below, although the 13 STR
+              algorithms achieved
+              high performance on the commonly used STR benchmarks, they exhibited an average accuracy drop of
+              20.50% on
+              Union14M-L. This indicates that existing STR algorithms trained on synthetic data lack generalization and
+              are far from
+              meeting the demands of real-world scenarios. It also addresses the previous question: STR is far from
+              being solved.
+            </p>
+            <p>
+            <div align=center>
+              <img src="static/images/performance.png" style="width: 60%" alt>
+            </div>
+            </p>
+          </div>
         </div>
       </div>
   </section>
 
   <section class="section">
     <div class="container is-max-desktop">
-
-      <div class="columns is-centered">
-
-        <!-- Visual Effects. -->
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3">Union14M-L: 4M Labeled Real Data</h2>
-            <p>
-              Union14M-L contains 4M images collected from 14 public available datasets. We adopt serval strategies
-              to refine the naive concatation of the 14 datasaets, including cropping (We use minimal axis-aligned
-              bounding box to
-              crop the images)
-              and de-duplication (Some datasets contains duplicate images and we remove them). We also categorize the
-              images in Union14M-L into five difficulty levels using an error voting method.
-            </p>
-            <p>
-            <div align=center>
-              <img src="static/images/union14ml.png" style="width: 100%" alt>
-            </div>
-          </div>
-        </div>
-        <!--/ Visual Effects. -->
-
-        <!-- Matting. -->
-        <div class="column">
-          <h2 class="title is-3">Union14M-U: 10M Unlabeled Real Data</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <p>
-                The optimal solution to improve the performance of STR in real-world scenarios is to utilize more data
-                for training.
-                However, labeling text images is both costly and time-intensive, given that it involves annotating
-                sequences and needs
-                specialized language expertise. Therefore, it would be desirable to investigate the potential of
-                utilizing unlabeled
-                data via self-supervised learning for STR. To this end we collect 10M unlabeled images from 3 large
-                datasets with an
-                IoU Voting method
-              </p>
-              <div align=center>
-                <img src="static/images/union14mu.png" style="width: 100%" alt>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <!--/ Matting. -->
-
-      <!-- Animation. -->
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Union14M-Benchmark</h2>
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Remaining Challenges for STR</h2>
           <div class="content has-text-justified">
             <p>
-              We raise seven open challenges for STR in real-world scenarios, and propose a challenge-driven benchmark
-              to facilitate
-              the future development.
+              We sumarized seven challenges for STR in real-world scenarios through error analysis on Union14M-L. Details 
+              can be find in our paper
+            </p>
+            <p>
+            <div align=center>
+              <img src="static/images/errorany.png" style="width: 100%" alt>
+            </div>
+            </p>
+
+            <p>
+              To assess STR models in a more comprehensive range of real-world scenarios and promote future research on the seven
+              challenges mentioned earlier, we have constructed a question-driven benchmark called Union14M-Benchmark. It consists of
+              eight subsets, comprising a total of 409,393 images.
             </p>
             <div align=center>
-              <img src="static/images/errorany.png" style="width: 80%" alt>
+              <img src="static/images/benchmark.jpg" style="width: 100%" alt>
             </div>
           </div>
         </div>
       </div>
-      <!--/ Animation. -->
-    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Benchmar Experiments</h2>
+          <div class="content has-text-justified">
+          <p>
+            We conducted benchmark tests on the aforementioned 13 STR models using Union14M-L to provide more quantitative analysis
+            conclusions. The results are presented in Table 5.
+          </p>
+          <p>
+          <div align=center>
+            <img src="static/images/experiment.png" style="width: 80%" alt>
+          </div>
+          </p>
+          <ul>
+            <li> 
+              <b>Conclusion 1: Real-world data is challenging.</b> As shown in Tables 5 and 6, compared to the commonly used benchmarks,
+              the average accuracy of models on Union14M-Benchmark decreased by 48.5% and 33.0% when trained on synthetic datasets and
+              Union14M-L, respectively. This indicates that text images in real-world scenarios are more complex than those in the six
+              commonly used benchmarks.
+            </li>
+            <li>
+              <b>Conclusion 2: Real-world data is effective.</b> Models trained on Union14M-L can achieve an average accuracy improvement of
+              3.9% on the commonly used benchmarks and a 19.6% improvement on Union14M-Benchmark. The relatively small
+              performance improvement on the common benchmarks also suggests their saturation state.
+            </li>
+            <li>  
+              <b>Conclusion 3: STR is still far from being solved.</b> When trained only on Union14M-L, we observed a maximum average
+              accuracy of only 74.6% on Union14M-Benchmark. This indicates that STR is far from being solved. Although relying on
+              large-scale real-world data can bring certain performance improvement, further research is still needed in the STR
+              community.
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
   </section>
 
   <section class="section">
@@ -313,15 +312,19 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">MAERec: A Real-world Adapted Recognizer</h2>
+          <div class="content has-text-justified">
           <p>
-            MAERec is a scene text recognition model composed of a ViT backbone and a Transformer decoder in
-            auto-regressive style.
-            It shows an outstanding performance in scene text recognition, especially when pre-trained on the Union14M-U
-            through
-            MAE.
+            To further explore the potential of addressing STR from a data perspective, we propose a scene text recognizer called
+            MAERec, which is based on self-supervised pre-training using the MAE paradigm. To leverage the 10 million unlabeled
+            images in Union14M-U, we pre-train the ViT backbone network in MAERec using the MAE pre-training paradigm.
+            After pre-training, we initialize MAERec with the pre-trained ViT weights and fine-tune the entire
+            model on Union14M-L. When using ViT-Base as the backbone network, MAERec achieves an
+            average accuracy of 85.2% on Union14M-Benchmark. This result demonstrates that utilizing large-scale unlabeled data can
+            significantly improve the performance of STR models in real-world scenarios and warrants further exploration.
           </p>
           <div align=center>
             <img src="static/images/maerec.png" style="width: 80%" alt>
+          </div>
           </div>
         </div>
       </div>
@@ -329,10 +332,23 @@
 
 
 
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{jiang2023revisiting,
+      title = {{Revisiting Scene Text Recognition: A Data Perspective},
+      author = {Jiang, Qing and Wang, Jiapeng and Peng, Dezhi and Liu, Chongyu and Jin, Lianwen},
+      booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+      year={2023}
+      }</code></pre>
+    </div>
+  </section>
+
+
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <a class="icon-link" href="https://arxiv.org/abs/2303.05657">
+        <a class="icon-link" href="https://arxiv.org/pdf/2307.08723">
           <i class="fas fa-file-pdf"></i>
         </a>
         <a class="icon-link" href="https://github.com/Mountchicken/Union14M" class="external-link" disabled>
